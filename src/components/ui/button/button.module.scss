@@ -1,0 +1,72 @@
+.button {
+  background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+  border-radius: 20px;
+  padding: 11px 23px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    box-shadow: 0px 2px 5px rgba(54, 54, 54, 0.1);
+  }
+
+  &:active {
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    box-shadow: 0px 3px 4px rgba(222, 125, 11, 0.2), 0px 1px 10px rgba(249, 89, 8, 0.2);
+  }
+}
+
+.label {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.bookingButton {
+  background: #FFFFFF;
+  border: 1px solid #BFC4C9;
+
+  &:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(54, 54, 54, 0.1);
+  }
+
+  &:active {
+    background: #FFFFFF;
+    box-shadow: 0px 3px 4px rgba(222, 125, 11, 0.2), 0px 1px 10px rgba(249, 89, 8, 0.2);
+  }
+}
+
+.bookingLabel {
+  color: #363636;
+}
+
+.disableButton {
+  background: #F9F9FA;
+  border: 1px solid #BFC4C9;
+
+  &:hover {
+    background: #F9F9FA;
+    border: 1px solid #BFC4C9;
+    box-shadow: none;
+  }
+
+  &:active {
+    background: #F9F9FA;
+    border: 1px solid #BFC4C9;
+    box-shadow: none;
+  }
+}
+
+.disableLabel {
+  color: #A7A7A7;
+}

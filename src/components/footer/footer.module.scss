@@ -1,0 +1,20 @@
+.footer {
+  flex: 0 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid #BFC4C9;
+}
+
+.iconBlock {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.iconBlock img:not(:last-child) {
+  margin-right: 1.75rem;
+}
