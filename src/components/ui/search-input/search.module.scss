@@ -61,3 +61,76 @@
   fill: url(#paint0_linear);
 }
 
+@media (max-width: 800px) {
+  .input {
+    width: 274px;
+    padding: 0.625rem 2.5rem 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .iconSearch {
+    display: none;
+  }
+
+  .iconClear {
+    display: none;
+  }
+
+  .input:focus ~ .iconClear {
+    display: block;
+    z-index: 15;
+  }
+
+  .input {
+    width: 32px;
+    height: 32px;
+    padding: 0.5rem;
+    background-color: transparent;
+	  background-image: url("../../../assets/icon/Icon_Action.svg");
+	  background-position: 0.5rem  center;
+	  background-repeat: no-repeat;
+	  background-size: 16px 16px;
+    color: transparent;
+
+    &::placeholder { 
+      color: transparent;
+    }
+
+    &:focus {
+      width: 288px;
+      background-image:none;
+      outline: none;
+      caret-color: #F83600;
+      padding: 0.5rem;
+      color: #363636;
+
+      &::placeholder { 
+        color: #A7A7A7;
+      }
+    }
+
+    &:active {
+      filter: none;
+    }
+  }
+}
+
+@media (max-width: 510px) {
+
+  .input:focus {
+    width: 275px;
+    height: 40px;
+    position: absolute;
+    z-index: 3;
+    background-color: #fff;
+    transform: translateY(-4px);
+  }
+
+  .input:focus ~ .iconClear {
+    position: relative;
+    left: 210px;
+    top: 0;
+    transform: translateY(9px);
+  }
+}

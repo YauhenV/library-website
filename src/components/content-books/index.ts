@@ -1,0 +1,1 @@
+export { ContentBooks } from './content-books';

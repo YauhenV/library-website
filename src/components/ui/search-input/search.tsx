@@ -5,18 +5,19 @@ import clearIcon from '../../../assets/icon/Icon_clear_input.svg';
 
 import styled from './search.module.scss';
 
-interface InputProps {
-    outInputValue: (value: string) => string;
-  }
+// interface InputProps {
+//     outInputValue: (value: string) => string;
+//   }
 
-export const Search: FC<InputProps> = ({outInputValue}) => {
+// export const Search: FC<InputProps> = ({outInputValue}) 
+export const Search: FC = () => {
     const [isFocus, setIsFocus] = useState(false);
     const [value, setValue] = useState('');
 
       // Возвращаем родителю значение input
-    useEffect(() => {
-      outInputValue(value && value);
-    }, [outInputValue, value]);
+    // useEffect(() => {
+    //   outInputValue(value && value);
+    // }, [outInputValue, value]);
 
     const focusInputHandler = () => {
         setIsFocus(true);

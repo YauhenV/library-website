@@ -2,6 +2,7 @@
   width: 100%;
   margin: 2rem 0 1rem 0;
   background: #FFFFFF;
+  flex: 0 0 auto;
 }
 
 .wrapper {
@@ -11,7 +12,16 @@
 }
 
 .logo {
-  margin-right: 7.5rem;
+  margin-right: 10rem;
+}
+
+.logo img {
+  width: 165px;
+  height: 40px;
+}
+
+.burgerMenu {
+  display: none;
 }
 
 .body {
@@ -36,3 +46,90 @@
   object-fit: cover;
   margin-left: 1rem;
 }
+
+.burgerMenu {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background: transparent;
+  position: relative;
+  z-index: 999;
+  width: 40px;
+  height: 30px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.burgerMenuIcon {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 3px;
+  background-color: #363636;
+
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #363636;
+  }
+
+  &::after {
+    left: 0;
+    top: -9px;
+  }
+
+  &::before {
+    left: 0;
+    top: 9px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .logo {
+    display: none;
+  }
+
+  .userBlock {
+    display: none;
+  }
+
+  .burgerMenu {
+    display: block;
+  }
+}
+
+@media (max-width: 650px) {
+  .burgerMenuIcon {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background-color: #363636;
+  
+    &::before, &::after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 2px;
+      background-color: #363636;
+    }
+  
+    &::after {
+      left: 0;
+      top: -5px;
+    }
+  
+    &::before {
+      left: 0;
+      top: 5px;
+    }
+  }
+
+}
+
+

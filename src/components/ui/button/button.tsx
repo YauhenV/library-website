@@ -4,7 +4,7 @@ import cnBind from 'classnames/bind';
 import styled from './button.module.scss';
 
 interface ButtonProps {
-    text: string,
+    text: () => string,
     booking?: boolean,
     disable?: boolean,
 }
@@ -28,7 +28,7 @@ export const Button: FC<ButtonProps> = ({text, booking=false, disable=false}) =>
 
     return (
         <button className={buttonStyles} type='button' onClick={buttonHandler} disabled={disable}>
-            <span className={labelStyles}>{text}</span>
+            <span className={labelStyles}>{text()}</span>
         </button>
     )
 }

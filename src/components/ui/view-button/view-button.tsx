@@ -1,28 +1,28 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import cnBind from 'classnames/bind';
 
 import styled from './viewButton.module.scss';
 
 interface ViewButtonProps {
+    handler?: ()=> void;
+    active?: boolean;
     lineIcon?: boolean;
 }
 
-export const ViewButton: FC<ViewButtonProps> = ({lineIcon=false}) => {
-    const [isActive, setIsActive] = useState(false);
-
+export const ViewButton: FC<ViewButtonProps> = ({ handler, active=false, lineIcon=false}) => {
     const buttonHandler = () => {
-        setIsActive(!isActive)
+        if (handler) handler();
     }
 
     const cx = cnBind.bind(styled);
     const buttonStyles = cx('button', {
-        buttonActive : isActive,
+        buttonActive : active,
     });
     const lineIconStyles = cx('lineIcon', {
-        lineIconActive : isActive,
+        lineIconActive : active,
     });
     const blockIconStyles = cx('blockIcon', {
-        blockIconActive : isActive,
+        blockIconActive : active,
     });
 
     const iconChoice = () => {
@@ -47,7 +47,6 @@ export const ViewButton: FC<ViewButtonProps> = ({lineIcon=false}) => {
     return (
         <button className={buttonStyles} type='button' onClick={buttonHandler}>
             {iconChoice()}
-            {/* <img className={styled.icon} src={isActive ? filterIconUp : filterIconDown} alt='Filter icon' /> */}
         </button>
     )
 }

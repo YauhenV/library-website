@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import { MainPage } from './pages/main';
+import { TestPage } from './pages/test-page';
 
 import './index.css';
 

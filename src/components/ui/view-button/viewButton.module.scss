@@ -42,9 +42,6 @@
 }
 
 
-
-
-
 .icon {
   position: absolute;
   left: 1rem;
@@ -60,4 +57,13 @@
   line-height: 18px;
   letter-spacing: 0.1px;
   color: #A7A7A7;
+}
+
+
+@media (max-width: 650px) {
+  .button{
+    width: 32px;
+    height: 32px;
+    padding: 0.4rem;
+  }
 }
