@@ -17,6 +17,11 @@
   }
 }
 
+.largePadding {
+  padding: 14px 96px;
+  border-radius: 30px;
+}
+
 .label {
   font-family: 'Montserrat';
   font-style: normal;
@@ -70,4 +75,15 @@
 
 .disableLabel {
   color: #A7A7A7;
+}
+
+.largeButton{
+  font-size: 16px;
+  line-height: 150%;
+}
+
+@media (max-width: 900px) {
+  .largePadding {
+    padding: 14px 0;
+  }
 }

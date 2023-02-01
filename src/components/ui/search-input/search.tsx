@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import cnBind from 'classnames/bind';
 
 import clearIcon from '../../../assets/icon/Icon_clear_input.svg';

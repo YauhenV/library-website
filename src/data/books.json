@@ -2,7 +2,7 @@
   "business": [
     {
       "id": "63ca7627f79ebdac69926ffc",
-      "image": "https://bukvaeshka.by/upload/iblock/e86/2576389_detail[1].jpg",
+      "image": "https://s1.livelib.ru/boocover/1002110803/o/bce2/Aditya_Bhargava__Grokaem_algoritmy._Illyustrirovannoe_posobie_dlya_programmistov.jpeg",
       "category": "business",
       "author": "Патрик Нимейер, Дэниэл Леук, 2013",
       "title": "Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих",
@@ -10,11 +10,12 @@
       "year": 1972,
       "isBooked": true,
       "isDisable": false,
-      "bookedTill": "2023-02-23"
+      "bookedTill": "2023-02-23",
+      "reviews": true
     },
     {
       "id": "63ca7627549c20ea76acb8fc",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKh1kp9pxj788ivnouf9Ni5KRRZYPBaWlGSg&usqp=CAU",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8_%D0%92%D0%B8%D0%BD%D0%B4%D0%B5%D0%BB%D1%8C%D0%B1%D0%B0%D0%BD%D0%B4%D0%B0.jpg",
       "category": "business",
       "author": "Lenore Delaney",
       "title": "Losee Terrace, Winfred, Louisiana",
@@ -29,11 +30,11 @@
       "category": "business",
       "author": "Katie Terry",
       "title": "Fair Street, Stewart, Nevada",
-      "rating": 1,
       "year": 1975,
       "isBooked": true,
       "isDisable": true,
-      "bookedTill": "2023-02-03"
+      "bookedTill": "2023-02-03",
+      "reviews": true
     },
     {
       "id": "63ca7627eab55a2591cefaac",

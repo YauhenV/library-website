@@ -2,5 +2,16 @@
   color: #A7A7A7;
   display: flex;
   flex-direction: row;
+  align-items: center;
+
   gap: 0.625rem;
+}
+
+.fullText {
+  margin-left: 1.5rem;
+}
+
+.fullTextColor h5{
+  color: #363636;
+  text-align: right;
 }

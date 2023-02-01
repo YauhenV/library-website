@@ -1,0 +1,17 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.body {
+  width: 80%;
+}
+
+
+@media (max-width: 965px) {
+  .body {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

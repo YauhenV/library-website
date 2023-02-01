@@ -1,8 +1,9 @@
 .header {
   width: 100%;
-  margin: 2rem 0 1rem 0;
+  padding: 2rem 0 1rem 0;
   background: #FFFFFF;
   flex: 0 0 auto;
+  margin-bottom: 3rem;
 }
 
 .wrapper {
@@ -90,6 +91,11 @@
 
 
 @media (max-width: 900px) {
+  .header {
+    padding: 2rem 0 1.5rem 0;
+    margin-bottom: 2rem;
+  }
+
   .logo {
     display: none;
   }
@@ -104,6 +110,11 @@
 }
 
 @media (max-width: 650px) {
+  .header {
+    padding: 1.5rem 0 1.5rem 0;
+    margin-bottom: 0.7rem;
+  }
+
   .burgerMenuIcon {
     display: block;
     position: relative;

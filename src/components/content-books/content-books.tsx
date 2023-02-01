@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import booksData from '../../data/books.json'
 import { BookCard } from '../book-card';
@@ -61,45 +62,38 @@ interface ContentBooksProps {
 //   bookedTill: string,
 // }
 
-interface BooksData {
-  [key: string]: Array<{
-    id: string,
-    image: string,
-    category: string,
-    author: string,
-    title: string,
-    rating: number,
-    year: number,
-    isBooked: boolean,
-    bookedTill: string,
-  }>
-}
+// interface BooksData {
+//   [key: string]: Array<{
+//     id: string,
+//     image: string,
+//     category: string,
+//     author: string,
+//     title: string,
+//     rating: number,
+//     year: number,
+//     isBooked: boolean,
+//     bookedTill: string,
+//   }>
+// }
 
-export const ContentBooks:FC<ContentBooksProps> = ({lineView=false}) => {
-
-  // const booksDataConst: BooksData = booksData;
-
-  Object.keys(booksData).map(item => console.log(item));
-  // Object.keys(booksDataConst).map((categories) =>
-  //   (booksDataConst[categories]).map((book) => console.log(book))
-  // );
-
-  return (
+export const ContentBooks:FC<ContentBooksProps> = ({lineView=false}) => (
     <section className={styled.books}>
       <div className={lineView ? styled.lineView : styled.blockView}>
         {booksData.business.map(item => (
-          <BookCard key={item.id}
-            title={item.title}
-            text={item.author}
-            bookingButton={item.isBooked}
-            disableButton={item.isDisable}
-            bookedTill={item.bookedTill}
-            image={item.image}
-            rating={item.rating}
-            lineView={lineView}
-          />
+          
+          <NavLink to={`/books/${item.category}/${item.id}`} key={item.id}>
+            <BookCard
+              title={item.title}
+              text={item.author}
+              bookingButton={item.isBooked}
+              disableButton={item.isDisable}
+              bookedTill={item.bookedTill}
+              image={item.image}
+              rating={item.rating}
+              lineView={lineView}
+            />
+          </NavLink>
         ))}
       </div>
     </section>
   )
-}

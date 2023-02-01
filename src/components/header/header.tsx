@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import avatarImg from '../../assets/avatar.png';
 import logoImg from '../../assets/logo.svg';
 import { Text } from '../ui/text';
@@ -12,7 +14,9 @@ export const Header = () => (
             <span className={styled.burgerMenuIcon} />
           </button> 
         <div className={styled.logo}>
-          <img src={logoImg} alt="logo" />
+          <Link to="/">
+            <img src={logoImg} alt="logo" />
+          </Link>
         </div>
         <div className={styled.body}>
           <div className={styled.title}>

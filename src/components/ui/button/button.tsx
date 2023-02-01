@@ -5,11 +5,12 @@ import styled from './button.module.scss';
 
 interface ButtonProps {
     text: () => string,
+    largeSize?: boolean,
     booking?: boolean,
     disable?: boolean,
 }
 
-export const Button: FC<ButtonProps> = ({text, booking=false, disable=false}) => {
+export const Button: FC<ButtonProps> = ({text, largeSize=false,  booking=false, disable=false}) => {
     const [isActive, setIsActive] = useState(false);
 
     const buttonHandler = () => {
@@ -20,10 +21,12 @@ export const Button: FC<ButtonProps> = ({text, booking=false, disable=false}) =>
     const buttonStyles = cx('button', {
         bookingButton: booking,
         disableButton: disable,
+        largePadding: largeSize,
       });
       const labelStyles = cx('label', {
         bookingLabel: booking,
         disableLabel: disable,
+        largeButton: largeSize,
       });
 
     return (

@@ -1,0 +1,1 @@
+export { BookPageTitle } from './book-page-title';

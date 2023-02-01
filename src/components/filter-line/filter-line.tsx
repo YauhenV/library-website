@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 
 import { Filter } from '../ui/filter-button';
 import { Search } from '../ui/search-input';
