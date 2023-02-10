@@ -1,0 +1,338 @@
+.content {
+  position: relative;
+}
+
+.block {
+  margin-bottom: 3.875rem;
+}
+
+.mainBlock {
+  margin-top: 4.5rem;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2.625rem;
+}
+.imageArray {
+  height: 700px;
+  width: 445px;
+  margin-right: 1.875rem;
+}
+
+.image {
+  margin-right: 1.875rem;
+  width: 445px;
+  height: 594px;
+  flex: 0 0 auto;
+  border: 1px solid #A7A7A7;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.noImage {
+  margin-right: 1.875rem;
+  width: 445px;
+  height: 594px;
+  flex: 0 0 auto;
+  border: 1px solid #A7A7A7;
+  background: #F9F9FA;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;  
+  object-fit: cover;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+}
+
+.authors {
+  color: #A7A7A7;
+  margin-bottom: 2rem;
+}
+
+.button {
+  width: 350px;
+  margin-bottom: 3.875rem;
+}
+
+.aboutBookText p{
+  margin-bottom: 1rem;
+}
+
+.ratingTitle {
+  padding-bottom: 1rem;
+  width: 350px;
+  border-bottom: 1px solid #F9F9FA;
+  margin-bottom: 1rem;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  max-width: 40%;
+  margin-right: 2rem;
+}
+
+.info2 {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  max-width: 60%;
+}
+
+.infoTitle p{
+  color: #A7A7A7;
+}
+
+.infoTitle p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.infoData p{
+  color: #363636;
+}
+
+.infoData p:not(:last-child){
+  margin-bottom: 1rem;
+}
+
+.reviewsButtonArrow {
+  display: inline;
+  margin-left: 29px;
+}
+
+.reviews {
+  margin-bottom: 2.625rem;
+}
+
+.buttonReviews{
+  border: none;
+  background-color: transparent;
+  text-align: left;
+}
+
+.buttonReviewsCursor {
+  cursor: pointer;
+}
+
+.reviewsBlock {
+  display: block;
+}
+
+.reviewsBlockHide {
+  display: none;
+}
+
+.reviewsAmount {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #A7A7A7;
+  margin-left: 0.5rem;
+}
+
+.reviewsButton {
+  width: 350px;
+}
+
+.aboutBookTablet {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .infoTitle p{
+    font-size: 14px;
+    line-height: 18px;
+  }
+  
+  .infoData p{
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .infoData p{
+    max-width: 170px;
+  }
+
+  .info {
+    max-width: 50%;
+  }
+  
+  .info2 {
+    max-width: 50%;
+  }
+
+  .block {
+    margin-bottom: 3.25rem;
+  }
+  
+  .reviewsButton {
+    width: 100%;
+  }
+
+  .button {
+    width: 306px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mainBlock {
+    margin-top: 7rem;
+    margin-bottom: 3.625rem;
+    padding-bottom: 0;
+  }
+
+  .image, .imageArray {
+    width: 136px;
+    height: 198px;
+  }
+
+  .noImage {
+    width: 136px;
+    height: 198px;
+  }
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  .title h3{
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .authors h5{
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .aboutBook {
+    display: none;
+  }
+
+  .aboutBookTablet {
+    display: block;
+  }
+
+  .button {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .infoBlock {
+    flex-direction: column;
+  }
+
+  .info {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    gap: 3rem;
+    margin-right: 0;
+  }
+
+  .info2 {
+    max-width: 100%;
+    gap: 3rem;
+  }
+
+  .infoData p{
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 650px) {
+  .mainBlock {
+    margin-top: 7rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .aboutBook {
+    display: block;
+  }
+
+  .aboutBookTablet {
+    display: none;
+  }
+
+  .mainBlock {
+    flex-direction: column;
+  }
+
+  .image, .imageArray {
+    margin: 0 auto;
+    width: 188px;
+    height: 260px;
+    margin-bottom: 1rem;
+  }
+
+  .imageArray {
+    margin-bottom: 3rem;
+  }
+
+  .noImage {
+    margin: 0 auto;
+    width: 188px;
+    height: 260px;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    margin-bottom: 0.5rem;
+  }
+
+  .title h3{
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .authors {
+    margin-bottom: 2.625rem;
+  }
+
+  .button {
+    margin-bottom: 2.625rem;
+    padding: 14px 0;
+    width: 100%;
+  }
+
+  .aboutBookText p{
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  .block {
+    margin-bottom: 2.625rem;
+  }
+
+  .info {
+    gap: 2rem;
+  }
+
+  .info2 {
+    gap: 2rem;
+  }
+
+  .reviews {
+    margin-bottom: 1.25rem;
+  }
+}
+

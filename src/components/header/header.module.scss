@@ -1,7 +1,9 @@
 .header {
   width: 100%;
-  margin: 2rem 0 1rem 0;
+  padding: 2rem 0 1rem 0;
   background: #FFFFFF;
+  flex: 0 0 auto;
+  margin-bottom: 3rem;
 }
 
 .wrapper {
@@ -11,7 +13,16 @@
 }
 
 .logo {
-  margin-right: 7.5rem;
+  margin-right: 10rem;
+}
+
+.logo img {
+  width: 165px;
+  height: 40px;
+}
+
+.burgerMenu {
+  display: none;
 }
 
 .body {
@@ -36,3 +47,131 @@
   object-fit: cover;
   margin-left: 1rem;
 }
+
+.burgerMenu {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background: transparent;
+  position: relative;
+  z-index: 999;
+  width: 40px;
+  height: 30px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.burgerMenuIcon {
+  display: block;
+  position: relative;
+  width: 27px;
+  height: 3px;
+  background-color: #363636;
+  border-radius: 10px;
+
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 3px;
+    background-color: #363636;
+    border-radius: 10px;
+    left: 0;
+  }
+
+  &::after {
+    top: -9px;
+  }
+
+  &::before {
+    top: 9px;
+  }
+}
+
+.menuActive {
+  background-color: transparent;
+
+  &::before, &::after {
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    top: 0px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after{
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 2rem 0 1.5rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .userBlock {
+    display: none;
+  }
+
+  .burgerMenu {
+    display: block;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    padding: 1.5rem 0 1.5rem 0;
+    margin-bottom: 0.7rem;
+  }
+
+  .burgerMenuIcon {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background-color: #363636;
+  
+    &::before, &::after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 2px;
+      background-color: #363636;
+      left: 0;
+    }
+  
+    &::after {
+      top: -5px;
+    }
+  
+    &::before {
+      top: 5px;
+    }
+  }
+
+  .menuActive {
+    background-color: transparent;
+  
+    &::before, &::after {
+      top: 0px;
+    }
+  
+    &::before {
+      transform: rotate(45deg);
+    }
+  
+    &::after{
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+

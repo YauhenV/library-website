@@ -1,5 +1,14 @@
 .search {
   position: relative;
+  margin-right: 1rem;
+}
+
+.searchMargin {
+  margin-right: 0;
+}
+
+.searchButton {
+  display: none;
 }
 
 .iconSearch {
@@ -11,13 +20,7 @@
 }
 
 .iconClear {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0;
-  background-color: #fff;
-  border: none;
+  display: none;
 }
 
 .input {
@@ -53,11 +56,75 @@
   }
 }
 
-.focusIconClear {
-  opacity: 100;
-}
-
-.focusIconSearch {
+.input:focus + svg{
   fill: url(#paint0_linear);
 }
 
+@media (max-width: 800px) {
+  .input {
+    width: 274px;
+    padding: 0.625rem 2.5rem 0.625rem 2.5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .iconSearch {
+    display: none;
+  }
+
+  .iconClear {
+    display: none;
+  }
+
+  .input {
+    display: none;
+    width: 32px;
+    height: 32px;
+    padding: 0.5rem;
+    background-color: transparent;
+	  background-image: url("../../../assets/icon/Icon_Action.svg");
+	  background-position: 0.5rem  center;
+	  background-repeat: no-repeat;
+	  background-size: 16px 16px;
+    color: transparent;
+    position: relative;
+
+    &::placeholder { 
+      color: transparent;
+    }
+
+    &:active {
+      filter: none;
+    }
+  }
+
+  .inputHandler {
+    display: block;
+    width: 100%;
+    background-image:none;
+    outline: none;
+    caret-color: #F83600;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    color: #363636;
+    height: 40px;
+    background-color: #fff;
+    transform: translateY(-4px);
+    margin-right: 0;
+
+    &::placeholder { 
+      color: #A7A7A7;
+    }
+  }
+
+  .iconClearHandler {
+    display: block;
+    z-index: 10;
+    position: absolute;
+    right: 1rem;
+    bottom: 60%;
+    transform: translateY(55%);
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+}

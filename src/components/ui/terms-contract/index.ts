@@ -1,0 +1,1 @@
+export { TermsContract } from './terms-contract';

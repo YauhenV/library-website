@@ -1,0 +1,37 @@
+.bookLine {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 132px;
+  background: #F9F9FA;
+  padding: 20px 0;
+}
+
+.text {
+  max-width: 1174px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  color: #A7A7A7;
+}
+
+.text span {
+  margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+  .bookLine {
+    top: 118px;
+  }
+}
+
+@media (max-width: 650px) {
+  .bookLine {
+    top: 84px;
+  }
+}
+
+@media (max-width: 550px) {
+  .text {
+      padding: 0 1rem;
+  }
+}

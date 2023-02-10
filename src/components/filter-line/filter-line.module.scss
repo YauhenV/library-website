@@ -1,0 +1,35 @@
+.filterLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.block {
+  display: flex;
+  flex-direction: row;
+}
+
+.lineViewButton {
+  margin-left: 1rem;
+}
+
+@media (max-width: 900px) {
+  .filterLine {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .displayNone {
+    display: None;
+  }
+
+  .blockWidth100 {
+    width: 100%;
+  }
+
+  .search {
+    width: 100%;
+  }
+}
