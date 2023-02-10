@@ -44,8 +44,6 @@ export const BookCard: FC<BookCardProps> = ({ title, text, bookingButton=false, 
     }
   }, [lineView, text])
 
-
-
   const buttonTextHandler = () => {
     if (!disableButton) {
       if (bookingButton) {
@@ -105,7 +103,6 @@ export const BookCard: FC<BookCardProps> = ({ title, text, bookingButton=false, 
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
       )

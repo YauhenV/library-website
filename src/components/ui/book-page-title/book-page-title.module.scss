@@ -3,6 +3,8 @@
   width: 350px;
   border-bottom: 1px solid #F9F9FA;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 550px) {

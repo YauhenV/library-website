@@ -1,5 +1,14 @@
 .search {
   position: relative;
+  margin-right: 1rem;
+}
+
+.searchMargin {
+  margin-right: 0;
+}
+
+.searchButton {
+  display: none;
 }
 
 .iconSearch {
@@ -11,13 +20,7 @@
 }
 
 .iconClear {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0;
-  background-color: #fff;
-  border: none;
+  display: none;
 }
 
 .input {
@@ -53,11 +56,7 @@
   }
 }
 
-.focusIconClear {
-  opacity: 100;
-}
-
-.focusIconSearch {
+.input:focus + svg{
   fill: url(#paint0_linear);
 }
 
@@ -68,7 +67,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 650px) {
   .iconSearch {
     display: none;
   }
@@ -77,12 +76,8 @@
     display: none;
   }
 
-  .input:focus ~ .iconClear {
-    display: block;
-    z-index: 15;
-  }
-
   .input {
+    display: none;
     width: 32px;
     height: 32px;
     padding: 0.5rem;
@@ -92,45 +87,44 @@
 	  background-repeat: no-repeat;
 	  background-size: 16px 16px;
     color: transparent;
+    position: relative;
 
     &::placeholder { 
       color: transparent;
-    }
-
-    &:focus {
-      width: 288px;
-      background-image:none;
-      outline: none;
-      caret-color: #F83600;
-      padding: 0.5rem;
-      color: #363636;
-
-      &::placeholder { 
-        color: #A7A7A7;
-      }
     }
 
     &:active {
       filter: none;
     }
   }
-}
 
-@media (max-width: 510px) {
-
-  .input:focus {
-    width: 275px;
+  .inputHandler {
+    display: block;
+    width: 100%;
+    background-image:none;
+    outline: none;
+    caret-color: #F83600;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    color: #363636;
     height: 40px;
-    position: absolute;
-    z-index: 3;
     background-color: #fff;
     transform: translateY(-4px);
+    margin-right: 0;
+
+    &::placeholder { 
+      color: #A7A7A7;
+    }
   }
 
-  .input:focus ~ .iconClear {
-    position: relative;
-    left: 210px;
-    top: 0;
-    transform: translateY(9px);
+  .iconClearHandler {
+    display: block;
+    z-index: 10;
+    position: absolute;
+    right: 1rem;
+    bottom: 60%;
+    transform: translateY(55%);
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
   }
 }

@@ -41,6 +41,9 @@
   fill: #FFFFFF;
 }
 
+.searchIcon {
+  fill: #A7A7A7;
+}
 
 .icon {
   position: absolute;
@@ -58,7 +61,6 @@
   letter-spacing: 0.1px;
   color: #A7A7A7;
 }
-
 
 @media (max-width: 650px) {
   .button{

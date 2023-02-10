@@ -21,7 +21,6 @@ export const BookNameLine: FC<BookNameLineProps> = ({ category, bookName}) => (
             <Text span={true}>
                 {bookName}
             </Text>
-            {/* {category} / {bookName} */}
         </div>
     </section>
 )

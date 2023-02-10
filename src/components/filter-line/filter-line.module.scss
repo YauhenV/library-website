@@ -10,10 +10,6 @@
   flex-direction: row;
 }
 
-.search {
-  margin-right: 1rem;
-}
-
 .lineViewButton {
   margin-left: 1rem;
 }
@@ -21,5 +17,19 @@
 @media (max-width: 900px) {
   .filterLine {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .displayNone {
+    display: None;
+  }
+
+  .blockWidth100 {
+    width: 100%;
+  }
+
+  .search {
+    width: 100%;
   }
 }

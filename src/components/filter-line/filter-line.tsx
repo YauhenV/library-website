@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import { Filter } from '../ui/filter-button';
 import { Search } from '../ui/search-input';
@@ -13,19 +13,26 @@ interface FilterLineProps {
 
 export const FilterLine:FC<FilterLineProps> = ({lineViewOut, lineViewIn}) => {
 
+  const [showInput, setShowInput] = useState(false);
+
+  const inputHandler = (value: boolean) => {
+    setShowInput(value);
+  }
   const changeViewHandler = () => {
     lineViewOut(!lineViewIn)
   }
 
   return (
     <div className={styled.filterLine}>
-      <div className={styled.block}>
+      <div className={`${styled.block} ${showInput ? styled.blockWidth100 : null}`}>
         <div className={styled.search}>
-          <Search />
+          <Search handler={inputHandler} inputStateProps={showInput} />
         </div>
-        <Filter />
+        <div className={`${styled.filter } ${showInput ? styled.displayNone : null}`}>
+          <Filter />
+        </div>
       </div>
-      <div className={styled.block}>
+      <div className={`${styled.block} ${showInput ? styled.displayNone : null}`}>
         <div className={styled.blockViewButton} data-test-id='button-menu-view-window'>
           <ViewButton active={!lineViewIn} handler={changeViewHandler} />
         </div>

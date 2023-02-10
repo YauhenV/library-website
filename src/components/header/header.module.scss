@@ -66,29 +66,46 @@
 .burgerMenuIcon {
   display: block;
   position: relative;
-  width: 30px;
+  width: 27px;
   height: 3px;
   background-color: #363636;
+  border-radius: 10px;
 
   &::before, &::after {
     position: absolute;
     content: "";
-    width: 30px;
+    width: 27px;
     height: 3px;
     background-color: #363636;
+    border-radius: 10px;
+    left: 0;
   }
 
   &::after {
-    left: 0;
     top: -9px;
   }
 
   &::before {
-    left: 0;
     top: 9px;
   }
 }
 
+.menuActive {
+  background-color: transparent;
+
+  &::before, &::after {
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    top: 0px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after{
+    transform: rotate(-45deg);
+  }
+}
 
 @media (max-width: 900px) {
   .header {
@@ -128,19 +145,33 @@
       width: 20px;
       height: 2px;
       background-color: #363636;
+      left: 0;
     }
   
     &::after {
-      left: 0;
       top: -5px;
     }
   
     &::before {
-      left: 0;
       top: 5px;
     }
   }
 
+  .menuActive {
+    background-color: transparent;
+  
+    &::before, &::after {
+      top: 0px;
+    }
+  
+    &::before {
+      transform: rotate(45deg);
+    }
+  
+    &::after{
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 

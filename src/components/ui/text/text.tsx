@@ -11,7 +11,6 @@ interface TextProps {
 }
 
 export const Text: FC<TextProps> = ({ largeSize=false, boldWeight=false, children, span=false }) => {
-
     const tagElement = () => {
         if (span) {
             return (

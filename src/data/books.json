@@ -1,8 +1,7 @@
-{
+{ 
   "business": [
     {
       "id": "63ca7627f79ebdac69926ffc",
-      "image": "https://s1.livelib.ru/boocover/1002110803/o/bce2/Aditya_Bhargava__Grokaem_algoritmy._Illyustrirovannoe_posobie_dlya_programmistov.jpeg",
       "category": "business",
       "author": "Патрик Нимейер, Дэниэл Леук, 2013",
       "title": "Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих",
@@ -27,6 +26,8 @@
     },
     {
       "id": "63ca762761ae79531f1acb53",
+      "imageArray" : true,
+      "image": "https://i.pinimg.com/originals/76/ab/13/76ab131499536ba3698e0038c6ed93b3.png",
       "category": "business",
       "author": "Katie Terry",
       "title": "Fair Street, Stewart, Nevada",
@@ -62,6 +63,7 @@
     },
     {
       "id": "63ca76278e7bae49e60cc08f",
+      "image": "https://s1.livelib.ru/boocover/1002110803/o/bce2/Aditya_Bhargava__Grokaem_algoritmy._Illyustrirovannoe_posobie_dlya_programmistov.jpeg",
       "category": "business",
       "author": "Jocelyn Benjamin",
       "title": "Hillel Place, Lydia, California",

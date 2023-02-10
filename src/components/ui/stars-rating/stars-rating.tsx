@@ -10,25 +10,24 @@ import styled from './stars-rating.module.scss';
 interface StarsRatingProps {
   rating?: number,
   full?: boolean,
-
 }
 
 export const StarsRating: FC<StarsRatingProps> = ({ rating, full=false }) => {
 
   const ratingDefault = () => (
-    <p className={full ? styled.fullText : undefined}>
+    <div className={full ? styled.fullText : undefined}>
       <Text>
         еще нет оценок
       </Text>
-    </p>
+    </div>
   )
 
   const ratingText = () => (
-    <p className={`${styled.fullTextColor} ${full ? styled.fullText : undefined}`}>
+    <div className={`${styled.fullTextColor} ${full ? styled.fullText : undefined}`}>
       <Title tag='h5'>
         {rating}
       </Title>
-    </p>
+    </div>
   )
 
   const ratingHandler = () => (
@@ -49,7 +48,6 @@ export const StarsRating: FC<StarsRatingProps> = ({ rating, full=false }) => {
       [...Array(5)].map(() => <img src={emptyStar} alt="Rating star" width='20px' height='19px' key={Math.random()} />)
     )
 
-
     const fullHandler = () => {
       if (full) {
         if (rating) {
@@ -61,21 +59,20 @@ export const StarsRating: FC<StarsRatingProps> = ({ rating, full=false }) => {
           )
         }
  
-          return (
-            <React.Fragment>
-              {ratingZeroStar()}
-              {ratingDefault()}
-            </React.Fragment>
-          )
-
+        return (
+          <React.Fragment>
+            {ratingZeroStar()}
+            {ratingDefault()}
+          </React.Fragment>
+        )
       }
 
       return rating ? ratingHandler() : ratingDefault()
     }
 
   return (
-          <div className={styled.rating}>
-            {fullHandler()}
-          </div>
+    <div className={styled.rating}>
+      {fullHandler()}
+    </div>
   )
 }

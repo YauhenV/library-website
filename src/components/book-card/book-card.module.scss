@@ -86,7 +86,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // object-fit: cover;
 }
 
 .noImageLine {
@@ -185,14 +184,17 @@
   .bookCardWrapperLine {
     padding: 1rem 1rem 1rem 0.5rem; 
   }
+
   .footerLine {
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem
   }
+
   .textBlockLine {
     height: 5rem;
   }
+  
   .contentLine {
     margin-left: 0.5rem;
   }
